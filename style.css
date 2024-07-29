@@ -1,0 +1,133 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Rubik+Iso&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+nav{
+    background-color: black;
+    color: aliceblue;
+    height:8vh;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    padding-left:10px;
+    /* justify-content: center; */
+    font-family: 'Roboto Condensed', sans-serif;
+}
+nav ul {
+    list-style: none;
+}
+
+.gamecontainer{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+    
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    /* border: 2px solid red; */
+    /* this border is used only for darken the outer boder of tic tac toe   */
+    position: relative;
+}
+
+.box{
+    border: 2px solid red;
+    font-size:8vw;
+    cursor: grabbing;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* u can use any of these .box or .box-text........ both are same */
+/* .box-text{
+    font-size:8vw;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.box:hover{
+    background-color: black;
+    color: white;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+
+.gameinfo{
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    font-family: 'Rubik Iso', cursive;
+}
+
+.line{
+    position: absolute;
+    /* height:0vh ;
+    width:29vw ; */
+   background-color:#280bd5;
+   /* transition: width 1s ease-in-out; */
+}
+
+#info{
+    padding-top: 15px;
+    /* padding-left: 15px; */
+    
+}
+#reset{
+   padding-top: 7px; 
+   /* padding-: 7px;  */
+
+   margin: 3px;
+}
+#reset:hover{
+    background-color: aqua;
+    cursor:all-scroll;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+
+    .box-text{
+        font-size: 2.6rem;
+    }
+
+    .gameinfo h2{
+        padding-top: 17px;
+        font-size: 1.3rem;
+    }
+    .img{
+       width: 150px;
+    }
+    
+}
